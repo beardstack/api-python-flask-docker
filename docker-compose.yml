@@ -16,7 +16,7 @@ services:
       context:  ./nginx
       dockerfile: Dockerfile
     ports:
-      - "80:80"
+      - "80:8000"
     links:
       - app
     volumes_from:

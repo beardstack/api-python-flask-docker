@@ -42,8 +42,8 @@ def show_details(show):
 def airing_shows():
 	list = ["curb enthusiasm","modern family","nathan for you","south park","westworld", "another period","brooklyn nine nine","big bang theory"]
 	episodes = []
-	for item in list:
-		details = show_details(item)
-		episodes.extend(details)
-	episodes.sort(key=operator.itemgetter(0))
-	return episodes
+	#for item in list:
+	#	details = show_details(item)
+	#	episodes.extend(details)
+	#episodes.sort(key=operator.itemgetter(0))
+	return list

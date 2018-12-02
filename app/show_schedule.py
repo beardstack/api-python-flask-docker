@@ -16,7 +16,9 @@ def episode_details(episode,show):
 	return details
 def show_details(show):
 	urlshow = "%20".join(show.split(" "))
-
+	
+	print "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+	
 	base = 'http://api.tvmaze.com/singlesearch/shows?q='
 	r = requests.get(base+urlshow)
 	details = json.loads(r.text)

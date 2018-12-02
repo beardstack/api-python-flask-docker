@@ -16,12 +16,14 @@ def episode_details(episode,show):
 	return details
 def show_details(show):
 	urlshow = "%20".join(show.split(" "))
-
+	
+	print "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+	
 	base = 'http://api.tvmaze.com/singlesearch/shows?q='
 	r = requests.get(base+urlshow)
 	details = json.loads(r.text)
-	#print(details['name'])
-	#print(details['status'])
+	print(details['name'])
+	print(details['status'])
 	next = []
 	if(details['status'] == 'Running'):
 		#print(details['schedule']['days'])
@@ -40,8 +42,8 @@ def show_details(show):
 def airing_shows():
 	list = ["curb enthusiasm","modern family","nathan for you","south park","westworld", "another period","brooklyn nine nine","big bang theory"]
 	episodes = []
-	for item in list:
-		details = show_details(item)
-		episodes.extend(details)
-	episodes.sort(key=operator.itemgetter(0))
-	return episodes
+	#for item in list:
+	#	details = show_details(item)
+	#	episodes.extend(details)
+	#episodes.sort(key=operator.itemgetter(0))
+	return list

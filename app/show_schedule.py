@@ -20,8 +20,8 @@ def show_details(show):
 	base = 'http://api.tvmaze.com/singlesearch/shows?q='
 	r = requests.get(base+urlshow)
 	details = json.loads(r.text)
-	#print(details['name'])
-	#print(details['status'])
+	print(details['name'])
+	print(details['status'])
 	next = []
 	if(details['status'] == 'Running'):
 		#print(details['schedule']['days'])

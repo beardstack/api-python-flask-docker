@@ -17,6 +17,12 @@ tasks = [
         'done': False
     },
     {
+        'id': 3,
+        'title': u'Buy Drugs',
+        'description': u'Coke, Weed, Tylenol',
+        'done': False
+    },
+    {
         'id': 2,
         'title': u'Learn Python',
         'description': u'Need to find a good Python tutorial on the web', 

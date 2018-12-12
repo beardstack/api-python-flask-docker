@@ -1,4 +1,4 @@
-FROM python:3
+FROM python:3.6-alpine
 WORKDIR /usr/src/app
 COPY requirements.txt ./
 ENV HTTPS_PROXY=http://142.117.128.41:80/

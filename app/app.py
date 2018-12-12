@@ -90,15 +90,15 @@ def make_public_task(task):
     return new_task
 
 @app.route('/todo/api/v1.0/tasks', methods=['GET'])
-@auth.login_required
+#@auth.login_required
 def get_tasks():
     return jsonify({'tasks': [make_public_task(task) for task in tasks]})
 
-@auth.get_password
-def get_password(username):
-    if username == 'miguel':
-        return 'python'
-    return None
+#@auth.get_password
+#def get_password(username):
+#    if username == 'miguel':
+#        return 'python'
+#    return None
 
 @auth.error_handler
 def unauthorized():
